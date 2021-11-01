@@ -10,26 +10,16 @@
 // 10; // false
 
 
-for (let i = 0; i < 5; i++) {
+const x = prompt('Enter any number, please')
 
-	const x = prompt('Enter any number, please')
-
-	for (let j = 2; j != 1; j++) {
-		if (x == 0 || x == 1) {
-			console.log(`${x}` + ' - false')
-			break;
-		} else if (x % j == 0) {
-			if (x != j) {
-				console.log(`${x}` + ' - false')
-				break;
-			} else {
-				console.log(`${x}` + ' - true')
-				break;
-			}
-		}
-		else {
-			continue;
-		}
+for (let j = 1; j <= x; j++) {
+	if ((x % j == 0) && j != x && j != 1 || x == 1) {
+		console.log("false")
+		break
+	} else if ((x % j == 0) && j == x) {
+		console.log("true")
+		break
+	} else {
+		continue
 	}
 }
-
